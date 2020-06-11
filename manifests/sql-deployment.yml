@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-sql-server
+spec:
+  selector:
+    matchLabels:
+      app: ms-sql-server
+  template:
+    metadata:
+      labels:
+        app: ms-sql-server
+    spec:
+      containers:
+      - name: ms-sql-server-container
+        image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+          - name: ACCEPT_EULA
+            value: "Y"
+          - name: SA_PASSWORD
+            value: "Pa55w0rd2020"
+          - name: MSSQL_PID
+            value: "Express"
+        ports:
+        - containerPort: 1433

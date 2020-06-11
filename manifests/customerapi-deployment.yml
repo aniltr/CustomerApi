@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customerapi-deployment
+spec:
+  selector:
+    matchLabels:
+      app: customerapi
+  template:
+    metadata:
+      labels:
+        app: customerapi
+    spec:
+      containers:
+      - name: customerapi-container
+        image: customerapi.azurecr.io/customerapi
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+          - name: DBServer
+            value: "ms-sql-server.default"
+        ports:
+        - containerPort: 80
