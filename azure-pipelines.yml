@@ -8,12 +8,12 @@ trigger:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'f84e0531-6b0d-41fe-8389-d288b53ea845'
+  dockerRegistryServiceConnection: '60571ee4-69e6-40d6-8252-2a3d5b8c74ba'
   imageRepository: 'customerapi'
   containerRegistry: 'customerapi.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildNumber)'
-
+  
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
   
@@ -49,7 +49,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'aniltrCustomerApi.default'
+    environment: 'aniltrCustomerApi-8365.default'
     strategy:
       runOnce:
         deploy:
