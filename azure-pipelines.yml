@@ -59,8 +59,6 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/sql-deployment.yml
-                $(Pipeline.Workspace)/manifests/sql-service.yml
                 $(Pipeline.Workspace)/manifests/customerapi-deployment.yml
                 $(Pipeline.Workspace)/manifests/customerapi-service.yml
               containers: |
