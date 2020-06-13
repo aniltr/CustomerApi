@@ -20,6 +20,6 @@ spec:
             cpu: "500m"
         env:
           - name: DBServer
-            value: sqlserver-service
+            value: customerapi-mssql
         ports:
         - containerPort: 80
