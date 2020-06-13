@@ -12,7 +12,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mssql
-        image: mcr.microsoft.com/mssql/server:2017-latest
+        image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
         ports:
         - containerPort: 1433
         env:
@@ -20,7 +20,7 @@ spec:
           value: "Developer"
         - name: ACCEPT_EULA
           value: "Y"
-        - name: MSSQL_SA_PASSWORD
+        - name: SA_PASSWORD
           value: Pa55w0rd2020 
         volumeMounts:
         - name: mssqldb
