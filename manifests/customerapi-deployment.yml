@@ -18,8 +18,5 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        env:
-          - name: DBServer
-            value: sqlserver-service
         ports:
         - containerPort: 80
