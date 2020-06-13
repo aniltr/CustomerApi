@@ -21,10 +21,7 @@ spec:
         - name: ACCEPT_EULA
           value: "Y"
         - name: SA_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: customerapi-data-secret
-              key: SA_PASSWORD 
+          value: Pa55w0rd2020 
         volumeMounts:
         - name: mssqldb
           mountPath: /var/opt/mssql
