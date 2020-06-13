@@ -17,11 +17,11 @@ spec:
         - containerPort: 1433
         env:
         - name: MSSQL_PID
-          value: "Developer"
+          value: "Express"
         - name: ACCEPT_EULA
           value: "Y"
         - name: SA_PASSWORD
-          value: Pa55w0rd2020 
+          value: "1Secure*Password1"
         volumeMounts:
         - name: mssqldb
           mountPath: /var/opt/mssql

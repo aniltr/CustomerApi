@@ -31,7 +31,7 @@ namespace CustomerApi
             var server = Configuration["DBServer"] ?? "localhost";
             var database = Configuration["Database"] ?? "Customers";
             var user = Configuration["DBUser"] ?? "SA";
-            var password = Configuration["DBPassword"] ?? "Pa55w0rd2020";
+            var password = Configuration["DBPassword"] ?? "1Secure*Password1";
             var port = Configuration["DBPort"] ?? "1433";
 
             services.AddDbContext<CustomerContext>(options =>
