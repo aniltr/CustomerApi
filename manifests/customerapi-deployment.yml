@@ -13,19 +13,10 @@ spec:
     spec:
       containers:
       - name: customerapi-container
-        image: acrcustomerapi.azurecr.io/customerapi
+        image: acrcustomerapi.azurecr.io/productapi:v1
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        env:
-          - name: DBServer
-            value: "kfmicrosvc.database.windows.net"
-          - name: Database
-            value: "customers"
-          - name: DBUser
-            value: "sqladmin"
-          - name: DBPassword
-            value: "Pa55w0rd2020"
         ports:
         - containerPort: 80

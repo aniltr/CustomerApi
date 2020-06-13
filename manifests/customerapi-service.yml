@@ -6,6 +6,6 @@ spec:
   selector:
     app: customerapi
   ports:
-  - port: 80
-    targetPort: 7991
+  - port: 8080
+    targetPort: 80
   type: LoadBalancer
