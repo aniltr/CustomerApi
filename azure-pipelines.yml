@@ -59,6 +59,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
+                $(Pipeline.Workspace)/manifests/customer-data-secrets.yml
                 $(Pipeline.Workspace)/manifests/customer-data-deployment.yml
                 $(Pipeline.Workspace)/manifests/customerapi-deployment.yml
               containers: |
