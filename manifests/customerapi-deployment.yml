@@ -15,7 +15,8 @@ spec:
       - name: customerapi-container
         image: acrcustomerapi.azurecr.io/customerapi
         env:
-          DBServer: "sqlserver-service"
+        - name: DBServer
+          value: $(DBServer)
         resources:
           limits:
             memory: "128Mi"
