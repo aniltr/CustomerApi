@@ -16,7 +16,7 @@ spec:
         image: acrcustomerapi.azurecr.io/customerapi
         env:
         - name: DBServer
-          value: $(DBServer)
+          value: '$(DBServer)'
         resources:
           limits:
             memory: "128Mi"
