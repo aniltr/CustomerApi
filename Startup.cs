@@ -28,7 +28,7 @@ namespace CustomerApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var server = Configuration["DBServer"] ?? "20.193.63.130";
+            var server = Configuration["DBServer"] ?? "20.193.28.74";
             var database = Configuration["Database"] ?? "Customers";
             var user = Configuration["DBUser"] ?? "SA";
             var password = Configuration["DBPassword"] ?? "Testing1122";
