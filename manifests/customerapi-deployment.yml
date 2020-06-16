@@ -26,6 +26,16 @@ spec:
               secretKeyRef:
                 name: mssql-secret
                 key: Database
+        - name: DBUser
+          valueFrom:
+              secretKeyRef:
+                name: mssql-secret
+                key: DBUser
+        - name: DBPassword
+          valueFrom:
+              secretKeyRef:
+                name: mssql-secret
+                key: DBPassword
         resources:
           limits:
             memory: "128Mi"
