@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customerapi-deployment
+
 spec:
   selector:
     matchLabels:
@@ -14,9 +15,8 @@ spec:
       containers:
       - name: customerapi-container
         image: acrcustomerapi.azurecr.io/customerapi
-        env:
-        - name: DBServer
-          value: '$(DBServer)'
+        environment:
+          DBServer: $(DBServer)
         resources:
           limits:
             memory: "128Mi"
