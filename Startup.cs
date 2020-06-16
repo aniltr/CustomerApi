@@ -29,7 +29,7 @@ namespace CustomerApi
         public void ConfigureServices(IServiceCollection services)
         {
             var server = Configuration["DBServer"] ?? "localhost";
-            var database = Configuration["Database"] ?? "Customers";
+            var database = Configuration["Database"] ?? "TestDB";
             var user = Configuration["DBUser"] ?? "SA";
             var password = Configuration["DBPassword"] ?? "Testing1122";
             var port = Configuration["DBPort"] ?? "1433";
