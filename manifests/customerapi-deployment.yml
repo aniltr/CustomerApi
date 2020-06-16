@@ -16,7 +16,7 @@ spec:
         image: acrcustomerapi.azurecr.io/customerapi
         env:
         - name: DBServer
-          value: "sqlserver-services"
+          value: "sqlserver-service"
         resources:
           limits:
             memory: "128Mi"
